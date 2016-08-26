@@ -131,4 +131,71 @@ h6{
 }
 img{
   cursor: default;
+  height: 559px;
+  width: 1100px;
+}
+.bannerText h2{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 4em;
+  color: white;
+  font-weight: 900;
+}
+.bannerText h3 a{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 300;
+}
+.bannerText h3 a:hover{
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 5px;
+}
+
+.bannerText{
+  position: absolute;
+  top: 140px;
+  left: 10%;
+  right: 20px;
+  max-width: 1100px;
+}
+@media (max-width: 1000px){
+  .bannerText{
+    top: 130px;
+    left: 7%;
+  }
+}
+@media (max-width: 991px){
+  .bannerText{
+    left: 15%;
+  }
+}
+@media (max-width: 850px){
+  .bannerText{
+    left: 10%;
+  }
+}
+@media (max-width: 720px){
+  .bannerText{
+    left: 4%;
+    top: 120px;
+  }
+  .bannerText h2{
+    font-size: 3.25em;
+  }
+  .bannerText h3 a{
+    font-size: 1em;
+  }
+}
+@media (max-width: 500px){
+  .bannerText{
+    left: 6%;
+    top: 190px;
+  }
+  .bannerText h2{
+    font-size: 2.5em;
+  }
+  .bannerText h3 a{
+    font-size: 0.75em;
+  }
 }

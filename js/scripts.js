@@ -57,11 +57,6 @@ function appendOrder(size, standard, premium, total){
                    "<br><strong>Premium Toppings:</strong> " + premium.join(" & ") +
                   "<br><strong>Pizza Total:</strong> $" + total + "</li>");
   }
-
-  // $("ul").append("<li><strong>Pizza Size:</strong> " + size +
-  //               "<br><strong>Standard Toppings:</strong> " + standard.join(" & ") +
-  //               "<br><strong>Premium Toppings:</strong> " + premium.join(" & ") +
-  //              "<br><strong>Pizza Total:</strong> $" + total + "</li>");
 }
 var newOrder = new Order();
 $("button#addOrder").click(function(){
