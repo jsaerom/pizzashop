@@ -79,18 +79,15 @@ $("button#addOrder").click(function(){
     $(".orderConfirmation").show();
     $(".total").text("$" + newOrder.addOrderCost());
   });
-
-  $("button#orderComplete").click(function(){
-    var customerName = $("input#customerName").val();
-    var customerStreet = $("input#addressStreet").val();
-    var customerCity = $("input#addressCity").val();
-    var customerState = $("input#addressState").val();
-    var customerPhone = $("input#customerPhone").val();
-    var newCustomer = new Customer(customerName, customerStreet, customerCity, customerState, customerPhone);
-    $(".address").text(newCustomer.fullAddress());
-    $(".orderConfirmation").hide();
-    $(".confirmationPage").show();
-  });
-
-
+});
+$("button#orderComplete").click(function(){
+  var customerName = $("input#customerName").val();
+  var customerStreet = $("input#addressStreet").val();
+  var customerCity = $("input#addressCity").val();
+  var customerState = $("input#addressState").val();
+  var customerPhone = $("input#customerPhone").val();
+  var newCustomer = new Customer(customerName, customerStreet, customerCity, customerState, customerPhone);
+  $(".address").text(newCustomer.fullAddress());
+  $(".orderConfirmation").hide();
+  $(".confirmationPage").show();
 });
