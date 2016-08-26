@@ -166,7 +166,14 @@ img{
     left: 6%;
   }
 }
-@media (max-width: 500px){
+@media (max-width: 720px){
+  .bannerText h2{
+    font-size: 3em;
+  }
+  .bannerText h3 a{
+    font-size: 1em;
+}
+@media (max-width: 540px){
   .bannerText h2{
     font-size: 2em;
   }
