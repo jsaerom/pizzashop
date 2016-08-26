@@ -5,9 +5,6 @@ body{
 .container{
   max-width: 1100px;
 }
-a img:hover{
-  cursor: default;
-}
 h1{
   font-family: 'Montserrat Subrayada', sans-serif;
   font-size: 5em;
@@ -45,9 +42,90 @@ h1{
 }
 .footer{
   position: relative;
-  margin-top: -2px;
+  margin-top: -1px;
   height: 80px;
 }
 .bacioContact{
   text-align: right;
+}
+.bacioHours{
+  padding-left: 10%;
+}
+.footer h4{
+  font-weight: bold;
+}
+#submitOrder{
+  float: right;
+}
+#order h4{
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#menu h2, .orderConfirmation h2{
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+.orderMenu, .orderConfirmation, .confirmationPage{
+  margin-top: 5%;
+}
+.addTopMargin{
+  margin-top: 9px;
+}
+#size{
+  width: 40%;
+}
+.btn{
+  border: 1.5px solid black;
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
+.btn:hover{
+  background-color: white;
+  color: black;
+  opacity: 1;
+  border: 1.5px solid black;
+  text-transform: uppercase;
+  font-size: .95em;
+}
+#inputCustomerAddress form{
+  display: table;
+}
+#inputCustomerAddress div{
+  display: table-row;
+}
+#inputCustomerAddress label{
+  display: table-cell;
+  margin-top: 5px;
+}
+#inputCustomerAddress input{
+  display: table-cell;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+.orderConfirmation li{
+  font-size: 17px;
+}
+.orderConfirmation p{
+  font-size: 20px;
+}
+.orderConfirmation hr{
+  width: 500px;
+}
+.orderConfirmation h2{
+  text-align: left;
+}
+h5{
+  font-size: 2.5em;
+  text-align:center;
+}
+h6{
+  font-size: 1.5em;
+  text-align:left;
 }

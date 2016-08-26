@@ -88,6 +88,7 @@ $("button#orderComplete").click(function(){
   var customerPhone = $("input#customerPhone").val();
   var newCustomer = new Customer(customerName, customerStreet, customerCity, customerState, customerPhone);
   $(".address").text(newCustomer.fullAddress());
+  $("#confirmationNumber").text(Math.floor(Math.random()*1000000));
   $(".orderConfirmation").hide();
   $(".confirmationPage").show();
 });
