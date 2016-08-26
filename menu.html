@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" media="screen" type="text/css">
+    <title>Menu</title>
+  </head>
+  <body>
+    <div class="container">
+  <!-- don't touch anything above this -->
+      <div class="navBar">
+        <h1>BACIO PIZZA</h1>
+        <h3><a href="index.html">Home</a> | <a href="menu.html">Menu</a></h3>
+      </div>
+      <div class="row">
+        <div class="col-xs-10" id="menu">
+          <h2>Menu</h2>
+          <div>
+            <label for="size">Pizza Size:</label>
+            <select class="form-control" name="size" id="size">
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+            </select>
+          </div>
+          <div>
+            <label>Standard Toppings ($0.50 each):</label>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="standard" class="standardTopping" value="Pepperoni">Pepperoni
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="standard" class="standardTopping" value="Grilled Onion">Grilled Onion
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="standard" class="standardTopping" value="Peppers">Peppers
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="standard" class="standardTopping" value="Tomato">Tomato
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="standard" class="standardTopping" value="Mushroom">Mushroom
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="standard" class="standardTopping" value="Vegan Beef">Vegan Beef
+              </label>
+            </div>
+          </div>
+          <div>
+            <label>Premium Toppings ($1.00 each):</label>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="premium" class="premiumTopping" value="Prosciutto">Prosciutto
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="premium" class="premiumTopping" value="Shrimp">Shrimp
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="premium" class="premiumTopping" value="Avocado">Avocado
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="premium" class="premiumTopping" value="Arugula">Arugula
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="premium" class="premiumTopping" value="Artichoke Hearts">Artichoke Hearts
+              </label>
+            </div>
+          </div>
+          <button type="button" class="btn btn-default" id="addOrder">Add Order</button>
+        </div>
+        <div class="col-xs-2" id="order">
+          <h4>Order Details:</h4>
+          <ul id="orderInfo">
+
+          </ul>
+          <p>Total: <span class="total"></span></p>
+          <button type="submit" class="btn btn-default" id="submitOrder">Order</button>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div id="wrapper">
+        <div class="footer">
+          <h4>Location:</h4>
+          <p>1606 Bloomingdale Ave.</p>
+          <p>Portland, OR 97217</p>
+          <h4>Hours:</h4>
+          <p>Monday - Thursday: 11AM - 10PM</p>
+          <p>Friday & Saturday: 11AM - 12AM</p>
+          <p>Sunday: 11AM - 6PM</p>
+          <h4>Contact Us:</h4>
+          <p>(503) 274 - 4274</p>
+          <a href="mailto:info@baciopizza.com">info@baciopizza.com</a>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- don't touch anything below this -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
