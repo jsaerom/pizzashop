@@ -19,3 +19,9 @@ h1{
   text-decoration: none;
   opacity: 0.5;
 }
+.orderConfirmation{
+  display: none;
+}
+.confirmationPage{
+  display: none;
+}

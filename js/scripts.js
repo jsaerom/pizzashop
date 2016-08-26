@@ -3,6 +3,23 @@ function Pizza(size){
   this.size = size;
   this.standard = [];
   this.premium = [];
+  this.price = 0;
+}
+
+function Order(){
+  this.pizza = [];
+}
+
+function Customer(name, street, city, state, phone){
+  this.name = name;
+  this.street = street;
+  this.city = city;
+  this.state = state;
+  this.phone = phone;
+}
+
+Customer.prototype.fullAddress = function(){
+  return this.street + ", " + this.city + ", " + this.state;
 }
 
 Pizza.prototype.pizzaPrice = function(){
@@ -14,22 +31,33 @@ Pizza.prototype.pizzaPrice = function(){
   } else {
     total += 8;
   }
-  return (total + (this.standard.length * 0.5) + (this.premium.length)).toFixed(2);
+  this.price = (total + (this.standard.length * 0.5) + (this.premium.length)).toFixed(2);
 }
 
-// function totalPrice
+Order.prototype.addOrderCost = function(){
+  var totalCost = 0;
+  for (var i = 0; i < this.pizza.length; i++){
+    totalCost += parseFloat(this.pizza[i].price);
+    return totalCost;
+  }
+}
+
 
 // Frontend Logic
 function appendOrder(size, standard, premium, total){
-  $("ul").append("<li>Pizza Size: " + size + "; " + "Standard Toppings: " + standard.toString() + "; Premium Toppings: " + premium.toString() + "Pizza Total: $" + total + "</li>");
+  $("ul").append("<li><strong>Pizza Size:</strong> " + size + "; "
+                + "<strong>Standard Toppings:</strong> " + standard.toString() +
+                "; <strong>Premium Toppings:</strong> " + premium.toString() +
+               "<strong> Pizza Total:</strong> $" + total + "</li>");
 }
-
+var newOrder = new Order();
 
 $("button#addOrder").click(function(){
   var pizzaSize = $("#size").val();
   var standardToppings = [];
   var premiumToppings = [];
   var pizzaOrder = new Pizza(pizzaSize);
+
   $("input:checkbox[name=standard]:checked").each(function(){
     standardToppings.push($(this).val());
   });
@@ -42,8 +70,27 @@ $("button#addOrder").click(function(){
   for (var j = 0; j < premiumToppings.length; j++){
     pizzaOrder.premium.push(premiumToppings[j]);
   }
-  appendOrder(pizzaOrder.size, pizzaOrder.standard, pizzaOrder.premium, pizzaOrder.pizzaPrice());
-  // $(".total").text(totalPrice());
+  pizzaOrder.pizzaPrice();
+  newOrder.pizza.push(pizzaOrder);
+  appendOrder(pizzaOrder.size, pizzaOrder.standard, pizzaOrder.premium, pizzaOrder.price);
+
+  $("button#submitOrder").click(function(){
+    $(".orderMenu").hide();
+    $(".orderConfirmation").show();
+    $(".total").text("$" + newOrder.addOrderCost());
+  });
+
+  $("button#orderComplete").click(function(){
+    var customerName = $("input#customerName").val();
+    var customerStreet = $("input#addressStreet").val();
+    var customerCity = $("input#addressCity").val();
+    var customerState = $("input#addressState").val();
+    var customerPhone = $("input#customerPhone").val();
+    var newCustomer = new Customer(customerName, customerStreet, customerCity, customerState, customerPhone);
+    $(".address").text(newCustomer.fullAddress());
+    $(".orderConfirmation").hide();
+    $(".confirmationPage").show();
+  });
 
 
 });
