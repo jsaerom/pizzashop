@@ -8,14 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" media="screen" type="text/css">
-    <title>Bacio's Menu</title>
+    <title>BACIO</title>
   </head>
   <body>
     <div class="container">
   <!-- don't touch anything above this -->
       <div class="navBar">
         <h1><a href="index.html">BACIO PIZZA</a></h1>
-        <h3><a href="index.html">Home</a> | <a href="menu.html">Menu</a></h3>
+        <h3><a href="index.html">Home</a> | <a href="menu.html">Menu</a> | <a href="about.html">About</a></h3>
       </div>
       <div class="row orderMenu">
         <div class="col-xs-8" id="menu">
@@ -33,98 +33,82 @@
             <div class="row">
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Spinach">Spinach
+                  <input id="spinach" type="checkbox" name="standard" class="standardTopping" value="Spinach">
+                  <label for="spinach">
+                    Spinach
                   </label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Jalapeno">Jalapeno
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Jalapeno" id="jalapeno">
+                  <label for="jalapeno">Jalapeno</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Chicken">Chicken
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Chicken" id="chicken">
+                  <label for="chicken">Chicken</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Broccoli">Broccoli
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Broccoli" id="broccoli">
+                  <label for="broccoli">Broccoli</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Pineapple">Pineapple
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Pineapple" id="pineapple">
+                  <label for="pineapple">Pineapple</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Italian Sausage">Italian Sausage
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Italian Sausage" id="italianSausage">
+                  <label for="italianSausage">Italian Sausage</label>
                 </div>
               </div>
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Pepperoni">Pepperoni
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Pepperoni" id="pepperoni">
+                  <label for="pepperoni">Pepperoni</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Grilled Onion">Grilled Onion
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Grilled Onion" id="grilledOnion">
+                  <label for="grilledOnion">Grilled Onion</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Peppers">Peppers
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Peppers" id="peppers">
+                  <label for="peppers">Peppers</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Tomato">Tomato
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Tomato" id="tomato">
+                  <label for="tomato">Tomato</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Mushroom">Mushroom
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Mushroom" id="mushroom">
+                  <label for="mushroom">Mushroom</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Vegan Beef">Vegan Beef
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Vegan Beef" id="veganBeef">
+                  <label for="veganBeef">Vegan Beef</label>
                 </div>
               </div>
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Ham">Ham
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Ham" id="ham">
+                  <label for="ham">Ham</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Sweet Potato">Sweet Potato
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Sweet Potato" id="sweetPotato">
+                  <label for="sweetPotato">Sweet Potato</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Bacon">Bacon
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Bacon" id="bacon">
+                  <label for="bacon">Bacon</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Garlic">Garlic
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Garlic" id="garlic">
+                  <label for="garlic">Garlic</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Kalamata Olives">Kalamata Olives
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Kalamata Olives" id="olives">
+                  <label for="olives">Kalamata Olives</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="standard" class="standardTopping" value="Corn">Corn
-                  </label>
+                  <input type="checkbox" name="standard" class="standardTopping" value="Corn" id="corn">
+                  <label for="corn">Corn</label>
                 </div>
               </div>
             </div>
@@ -132,83 +116,68 @@
             <div class="row">
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Prosciutto">Prosciutto
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Prosciutto" id="prosciutto">
+                  <label for="prosciutto">Prosciutto</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Shrimp">Shrimp
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Shrimp" id="shrimp">
+                  <label for="shrimp">Shrimp</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Avocado">Avocado
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Avocado" id="avocado">
+                  <label for="avocado">Avocado</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Arugula">Arugula
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Arugula" id="arugula">
+                  <label for="arugula">Arugula</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Artichoke Hearts">Artichoke Hearts
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Artichoke Hearts" id="artichoke">
+                  <label for="artichoke">Artichoke Hearts</label>
                 </div>
               </div>
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Goat Cheese">Goat Cheese
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Goat Cheese" id="goatCheese">
+                  <label for="goatCheese">Goat Cheese</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Sun-dried Tomato">Sun-dried Tomato
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Sun-dried Tomato" id="sunDried">
+                  <label for="sunDried">Sun-dried Tomato</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Egg">Egg
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Egg" id="egg">
+                  <label for="egg">Egg</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Feta Cheese">Feta Cheese
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Feta Cheese" id="feta">
+                  <label for="feta">Feta Cheese</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Gorgonzola">Gorgonzola
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Gorgonzola" id="gorgonzola">
+                  <label for="gorgonzola">Gorgonzola</label>
                 </div>
               </div>
               <div class="col-xs-4">
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Burrata">Burrata
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Burrata" id="burrata">
+                  <label for="burrata">Burrata</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Anchovies">Anchovies
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Anchovies" id="anchovies">
+                  <label for="anchovies">Anchovies</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Sopressata">Sopressata
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Sopressata" id="sopressata">
+                  <label for="sopressata">Sopressata</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Basil">Basil
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Basil" id="basil">
+                  <label for="basil">Basil</label>
                 </div>
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="premium" class="premiumTopping" value="Smoked Salmon">Smoked Salmon
-                  </label>
+                  <input type="checkbox" name="premium" class="premiumTopping" value="Smoked Salmon" id="salmon">
+                  <label for="salmon">Smoked Salmon</label>
                 </div>
               </div>
             </div>
@@ -234,8 +203,9 @@
         <hr>
         <p>Order Total: <span class="total"></span></p>
         <form id="inputCustomerAddress">
+          <h3>Your Information:</h3>
           <div class="form-group">
-            <label for="customerName">Your Name:</label>
+            <label for="customerName">Name:</label>
             <input name="customerName" id="customerName">
           </div>
           <div class="form-group">

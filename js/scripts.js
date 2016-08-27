@@ -7,6 +7,7 @@ function Pizza(size){
 }
 function Order(){
   this.pizza = [];
+  this.confirmation = 0;
 }
 function Customer(name, street, city, state, phone){
   this.name = name;
@@ -97,7 +98,8 @@ $("button#orderComplete").click(function(){
   var customerPhone = $("input#customerPhone").val();
   var newCustomer = new Customer(customerName, customerStreet, customerCity, customerState, customerPhone);
   $(".address").text(newCustomer.fullAddress());
-  $("#confirmationNumber").text(Math.floor(Math.random()*1000000));
+  newOrder.confirmation = Math.floor(Math.random()*1000000)
+  $("#confirmationNumber").text(newOrder.confirmation);
   $(".orderConfirmation").hide();
   $(".confirmationPage").show();
 });
