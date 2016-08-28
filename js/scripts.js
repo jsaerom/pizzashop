@@ -1,5 +1,6 @@
 // Backend Logic
-function Pizza(size){
+function CustomPizza(name, size){
+  this.name = name;
   this.size = size;
   this.standard = [];
   this.premium = [];
@@ -7,7 +8,13 @@ function Pizza(size){
 }
 function Order(){
   this.pizza = [];
+  this.otherOrder = [];
   this.confirmation = 0;
+}
+function OtherOrder(){
+  this.name = name;
+  this.type = type;
+  this.price = 0;
 }
 function Customer(name, street, city, state, phone){
   this.name = name;
@@ -19,7 +26,7 @@ function Customer(name, street, city, state, phone){
 Customer.prototype.fullAddress = function(){
   return this.street + ", " + this.city + ", " + this.state;
 }
-Pizza.prototype.pizzaPrice = function(){
+CustomPizza.prototype.pizzaPrice = function(){
   var total = 0;
   if (this.size === "Small"){
     total += 6;
@@ -31,40 +38,65 @@ Pizza.prototype.pizzaPrice = function(){
   this.price = (total + (this.standard.length * 0.5) + (this.premium.length)).toFixed(2);
 }
 Order.prototype.addOrderCost = function(){
-  var totalCost = 0;
+  var totalCustomPizza = 0;
+  var totalOtherItem = 0;
   for (var i = 0; i < this.pizza.length; i++){
-    totalCost += parseFloat(this.pizza[i].price);
+    totalCustomPizza += parseFloat(this.pizza[i].price);
   }
-  return totalCost;
+  for (var j=0; j < this.otherOrder.length; j++){
+    totalOtherItem += parseFloat(this.otherOrder[j].price);
+  }
+  return totalCost + totalOtherItem;
+}
+OtherOrder.prototype.itemPrice = function(){
+  var total = 0;
+  if (this.type === "setPizza"){
+    total = 10;
+  } else if (this.type === "setPasta"){
+    total = 11;
+  } else if (this.type === "setDessert"){
+    total = 4;
+  }
+  return total;
 }
 
 // Frontend Logic
-function appendOrder(size, standard, premium, total){
+function appendOrder(name, size, standard, premium, total){
   if (standard.length === 0 && premium.length === 0){
-    $("ul").append("<li><strong>Pizza Size:</strong> " + size +
+    $("ul").append("<li>" name + "<br><strong>Pizza Size:</strong> " + size +
                   "<br>No Toppings" +
                   "<br><strong>Pizza Total:</strong> $" + total + "</li>");
   } else if (standard.length === 0 && premium.length > 0){
-    $("ul").append("<li><strong>Pizza Size:</strong> " + size +
+    $("ul").append("<li>" name + "<br><strong>Pizza Size:</strong> " + size +
                   "<br><strong>Premium Toppings:</strong> " + premium.join(" & ") +
                  "<br><strong>Pizza Total:</strong> $" + total + "</li>");
   } else if (standard.length > 0 && premium.length === 0){
-    $("ul").append("<li><strong>Pizza Size:</strong> " + size +
+    $("ul").append("<li>" name + "<br><strong>Pizza Size:</strong> " + size +
                   "<br><strong>Standard Toppings:</strong> " + standard.join(" & ") +
                  "<br><strong>Pizza Total:</strong> $" + total + "</li>");
   } else{
-    $("ul").append("<li><strong>Pizza Size:</strong> " + size +
+    $("ul").append("<li>" name + "<br><strong>Pizza Size:</strong> " + size +
                    "<br><strong>Standard Toppings:</strong> " + standard.join(" & ") +
                    "<br><strong>Premium Toppings:</strong> " + premium.join(" & ") +
                   "<br><strong>Pizza Total:</strong> $" + total + "</li>");
   }
 }
+
+$("#customPizzaToggle").hide();
+$("input#customizedPizza").click(function(){
+  $("#customPizzaToggle").toggle();
+});
+
+
+
+
 var newOrder = new Order();
 $("button#addOrder").click(function(){
   var pizzaSize = $("#size").val();
   var standardToppings = [];
   var premiumToppings = [];
-  var pizzaOrder = new Pizza(pizzaSize);
+  var otherItem = [];
+  var pizzaOrder = new CustomPizza("Custom Pizza", pizzaSize);
 
   $("input:checkbox[name=standard]:checked").each(function(){
     standardToppings.push($(this).val());
@@ -72,12 +104,26 @@ $("button#addOrder").click(function(){
   $("input:checkbox[name=premium]:checked").each(function(){
     premiumToppings.push($(this).val());
   });
+  $("input:checkbox[name=setPizza]:checked").each(function(){
+    otherItem.push($(this).val());
+  });
+  $("input:checkbox[name=setPasta]:checked").each(function(){
+    otherItem.push($(this).val());
+  });
+  $("input:checkbox[name=setDessert]:checked").each(function(){
+    otherItem.push($(this).val());
+  });
   for (var i = 0; i < standardToppings.length; i++){
     pizzaOrder.standard.push(standardToppings[i]);
   }
   for (var j = 0; j < premiumToppings.length; j++){
     pizzaOrder.premium.push(premiumToppings[j]);
   }
+  for (var k = 0; k < otherItem.length; k++){
+    newOrder.otherOther.push(otherItem[k]);
+  }
+
+
   pizzaOrder.pizzaPrice();
   newOrder.pizza.push(pizzaOrder);
   appendOrder(pizzaOrder.size, pizzaOrder.standard, pizzaOrder.premium, pizzaOrder.price);

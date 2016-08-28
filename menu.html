@@ -18,173 +18,258 @@
         <h3><a href="index.html">Home</a> | <a href="menu.html">Menu</a> | <a href="about.html">About</a></h3>
       </div>
       <div class="row orderMenu">
+
         <div class="col-xs-8" id="menu">
           <h2>MENU</h2>
-          <form id="customPizzaCreator">
-            <div>
-              <label for="size">Pizza Size:</label>
-              <select class="form-control" name="size" id="size">
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-              </select>
+          <h3>Pizza</h3>
+          <form id="pizzaOrderMenu">
+            <div class="checkbox1">
+              <input id="margherita" type="checkbox" name="setPizza" value="Margherita Pizza">
+              <label for="margherita">
+                Margherita
+              </label>
+              <p>Cherry tomato, fresh mozzarella, fresh basil, tomato sauce</p>
             </div>
-            <label class="addTopMargin">Standard Toppings ($0.50 each):</label>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="checkbox">
-                  <input id="spinach" type="checkbox" name="standard" class="standardTopping" value="Spinach">
-                  <label for="spinach">
-                    Spinach
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Jalapeno" id="jalapeno">
-                  <label for="jalapeno">Jalapeno</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Chicken" id="chicken">
-                  <label for="chicken">Chicken</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Broccoli" id="broccoli">
-                  <label for="broccoli">Broccoli</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Pineapple" id="pineapple">
-                  <label for="pineapple">Pineapple</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Italian Sausage" id="italianSausage">
-                  <label for="italianSausage">Italian Sausage</label>
-                </div>
-              </div>
-              <div class="col-xs-4">
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Pepperoni" id="pepperoni">
-                  <label for="pepperoni">Pepperoni</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Grilled Onion" id="grilledOnion">
-                  <label for="grilledOnion">Grilled Onion</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Peppers" id="peppers">
-                  <label for="peppers">Peppers</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Tomato" id="tomato">
-                  <label for="tomato">Tomato</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Mushroom" id="mushroom">
-                  <label for="mushroom">Mushroom</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Vegan Beef" id="veganBeef">
-                  <label for="veganBeef">Vegan Beef</label>
-                </div>
-              </div>
-              <div class="col-xs-4">
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Ham" id="ham">
-                  <label for="ham">Ham</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Sweet Potato" id="sweetPotato">
-                  <label for="sweetPotato">Sweet Potato</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Bacon" id="bacon">
-                  <label for="bacon">Bacon</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Garlic" id="garlic">
-                  <label for="garlic">Garlic</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Kalamata Olives" id="olives">
-                  <label for="olives">Kalamata Olives</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="standard" class="standardTopping" value="Corn" id="corn">
-                  <label for="corn">Corn</label>
-                </div>
-              </div>
+            <div class="checkbox1">
+              <input type="checkbox" name="setPizza" value="Bloomingdale Pizza" id="bloomingdale">
+              <label for="bloomingdale">Bloomingdale Pizza</label>
+              <p>Prosciutto, cherry tomato, fresh mozzarella, fresh basil, tomato sauce</p>
             </div>
-            <label>Premium Toppings ($1.00 each):</label>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Prosciutto" id="prosciutto">
-                  <label for="prosciutto">Prosciutto</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Shrimp" id="shrimp">
-                  <label for="shrimp">Shrimp</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Avocado" id="avocado">
-                  <label for="avocado">Avocado</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Arugula" id="arugula">
-                  <label for="arugula">Arugula</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Artichoke Hearts" id="artichoke">
-                  <label for="artichoke">Artichoke Hearts</label>
-                </div>
-              </div>
-              <div class="col-xs-4">
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Goat Cheese" id="goatCheese">
-                  <label for="goatCheese">Goat Cheese</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Sun-dried Tomato" id="sunDried">
-                  <label for="sunDried">Sun-dried Tomato</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Egg" id="egg">
-                  <label for="egg">Egg</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Feta Cheese" id="feta">
-                  <label for="feta">Feta Cheese</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Gorgonzola" id="gorgonzola">
-                  <label for="gorgonzola">Gorgonzola</label>
-                </div>
-              </div>
-              <div class="col-xs-4">
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Burrata" id="burrata">
-                  <label for="burrata">Burrata</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Anchovies" id="anchovies">
-                  <label for="anchovies">Anchovies</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Sopressata" id="sopressata">
-                  <label for="sopressata">Sopressata</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Basil" id="basil">
-                  <label for="basil">Basil</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="premium" class="premiumTopping" value="Smoked Salmon" id="salmon">
-                  <label for="salmon">Smoked Salmon</label>
-                </div>
-              </div>
+            <div class="checkbox1">
+              <input type="checkbox" name="setPizza" value="No. 81 Pizza" id="no81">
+              <label for="no81">No. 81 Pizza</label>
+              <p>Gorgonzola, roasted garlic, fresh mozzarella, parsley, tomato sauce</p>
             </div>
-            <hr>
-            <button type="button" class="btn btn-default" id="addOrder">Add Order</button>
+            <div class="checkbox1">
+              <input type="checkbox" name="setPizza" value="Eckington Pizza" id="eckington">
+              <label for="eckington">Eckington Pizza</label>
+              <p>Pepperoni, ham, italian sausage, caramelized onion, shredded mozzarella, tomato sauce</p>
+            </div>
+            <div class="checkbox1">
+              <input type="checkbox" name="setPizza" value="Common Good Pizza" id="commonGood">
+              <label for="commonGood">Common Good Pizza</label>
+              <p>Ham, arugula, cherry tomato, shredded mozzarella, tomato sauce</p>
+            </div>
+            <div class="checkbox1">
+              <input type="checkbox" name="setPizza" value="Custom Pizza" id="customizedPizza">
+              <label for="customizedPizza">Custom Pizza</label>
+              <p>Create your custom pizza</p>
+            </div>
           </form>
+          <form id="customPizzaCreator">
+            <div id="customPizzaToggle">
+              <div>
+                <label for="size">Pizza Size:</label>
+                <select class="form-control" name="size" id="size">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+                </select>
+              </div>
+              <label class="addTopMargin">Standard Toppings ($0.50 each):</label>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="checkbox1">
+                    <input id="spinach" type="checkbox" name="standard" value="Spinach">
+                    <label for="spinach">
+                      Spinach
+                    </label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Jalapeno" id="jalapeno">
+                    <label for="jalapeno">Jalapeno</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Chicken" id="chicken">
+                    <label for="chicken">Chicken</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Broccoli" id="broccoli">
+                    <label for="broccoli">Broccoli</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Pineapple" id="pineapple">
+                    <label for="pineapple">Pineapple</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Italian Sausage" id="italianSausage">
+                    <label for="italianSausage">Italian Sausage</label>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Pepperoni" id="pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Grilled Onion" id="grilledOnion">
+                    <label for="grilledOnion">Grilled Onion</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Peppers" id="peppers">
+                    <label for="peppers">Peppers</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Tomato" id="tomato">
+                    <label for="tomato">Tomato</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Mushroom" id="mushroom">
+                    <label for="mushroom">Mushroom</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Vegan Beef" id="veganBeef">
+                    <label for="veganBeef">Vegan Beef</label>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Ham" id="ham">
+                    <label for="ham">Ham</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Sweet Potato" id="sweetPotato">
+                    <label for="sweetPotato">Sweet Potato</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Bacon" id="bacon">
+                    <label for="bacon">Bacon</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Garlic" id="garlic">
+                    <label for="garlic">Garlic</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Kalamata Olives" id="olives">
+                    <label for="olives">Kalamata Olives</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="standard" value="Corn" id="corn">
+                    <label for="corn">Corn</label>
+                  </div>
+                </div>
+              </div>
+              <label>Premium Toppings ($1.00 each):</label>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Prosciutto" id="prosciutto">
+                    <label for="prosciutto">Prosciutto</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Shrimp" id="shrimp">
+                    <label for="shrimp">Shrimp</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Avocado" id="avocado">
+                    <label for="avocado">Avocado</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Arugula" id="arugula">
+                    <label for="arugula">Arugula</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Artichoke Hearts" id="artichoke">
+                    <label for="artichoke">Artichoke Hearts</label>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Goat Cheese" id="goatCheese">
+                    <label for="goatCheese">Goat Cheese</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Sun-dried Tomato" id="sunDried">
+                    <label for="sunDried">Sun-dried Tomato</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Egg" id="egg">
+                    <label for="egg">Egg</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Feta Cheese" id="feta">
+                    <label for="feta">Feta Cheese</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Gorgonzola" id="gorgonzola">
+                    <label for="gorgonzola">Gorgonzola</label>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Burrata" id="burrata">
+                    <label for="burrata">Burrata</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Anchovies" id="anchovies">
+                    <label for="anchovies">Anchovies</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Sopressata" id="sopressata">
+                    <label for="sopressata">Sopressata</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Basil" id="basil">
+                    <label for="basil">Basil</label>
+                  </div>
+                  <div class="checkbox1">
+                    <input type="checkbox" name="premium" value="Smoked Salmon" id="salmon">
+                    <label for="salmon">Smoked Salmon</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <h3>Pasta</h3>
+          <form id="pastaOrderMenu">
+            <div class="checkbox1">
+              <input id="tortellini" type="checkbox" name="setPasta" value="Tortellini 23">
+              <label for="tortellini">
+                Tortellini 23
+              </label>
+              <p>Homemade stuffed tortellini with beets and sheep's milk ricotta, burrata, truffle oil</p>
+            </div>
+            <div class="checkbox1">
+              <input id="scialiatielli" type="checkbox" name="setPasta" value="Scialiatielli al Nero 20">
+              <label for="scialiatielli">
+                Scialiatielli al Nero 20
+              </label>
+              <p>Homemade squid ink scialatielli, prawans, 'nduja salami</p>
+            </div>
+            <div class="checkbox1">
+              <input id="cavatelli" type="checkbox" name="setPasta" value="Cavatelli 19">
+              <label for="cavatelli">
+                Cavatelli 19
+              </label>
+              <p>Homemade cavatelli, smoked blue bay mussels, heirloom cherry tomato, potato, spicy white wine sauce</p>
+            </div>
+          </form>
+          <h3>Desserts</h3>
+          <form id="dessertOrderMenu">
+            <div class="checkbox1">
+              <input id="tiramisu" type="checkbox" name="setDessert" value="Tiramisu">
+              <label for="tiramisu">
+                Tiramisu</label>
+              <p>Whipped cream, coffee, lady fingers, amaro montenegro, roasted nuts</p>
+            </div>
+            <div class="checkbox1">
+              <input id="affogato" type="checkbox" name="setDessert" value="Affogato">
+              <label for="affogato">
+                Affogato</label>
+              <p>Vanilla gelato with a shot of espresso</p>
+            </div>
+          </form>
+          <hr>
+          <button type="button" class="btn btn-default" id="addOrder">Add Order</button>
+
+
+<!-- div for end of menu column -->
         </div>
+
+
+
+
+
         <div class="col-xs-4 addTopMargin" id="order">
           <h4>Order Details:</h4>
           <ul class="orderInfo">
